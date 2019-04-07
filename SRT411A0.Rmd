@@ -1,0 +1,122 @@
+---
+title: "Assignment0"
+output: pdf_document
+---
+1) TODO
+```{r}
+ ((2018-2014)/(2014-1989))*100
+```
+
+2) TODO
+```{r}
+ok <-(2018 - 2014)
+mk <- (2014 - 1989)
+jk <- ((ok/mk)*100)
+jk
+```
+3) TODO
+```{r}
+b= c(4,5,8,11)
+sum(b)
+```
+4) TODO
+```{r}
+f = rnorm(100)
+plot(f)
+```
+
+5) TODO
+```{r}
+help (sqrt)
+
+```
+
+6) TODO
+```{r}
+P= seq(from= 31, to= 60)
+Q= matrix(data= P, ncol=5, nrow=6)
+Q
+```
+7) TODO 
+```{r}
+x1= rnorm(100)
+x2= rnorm(100)
+x3= rnorm(100)
+t= data.frame(a = x1, b=(x1+x2), c= (x1+x2+x3))
+plot(t)
+sd(t$a)
+sd(t$b)
+sd(t$c)
+```
+
+8) TODO 
+```{r}
+plot(t$a, type="l", ylim=range(t),
+     lwd=3, col=rgb(1,0,0,0.3))
+lines(t$b, type="s", lwd=2,
+      col=rgb(0.3,0.4,0.3,0.9))
+points(t$c, pch=20, cex=4, col=rgb(0,0,1,0.3))
+```
+explanation: 
+rgb stands for red, green and blue. This is used to identify colour in the graph. 
+
+9) TODO
+```{r}
+sqrt (rnorm(100))
+```
+When sqrt is executed, NaNs is the output. This stands for not a number.
+
+10) TODO 
+```{r}
+dates= strptime(c("20190310", "20191224","20191215"),format="%Y%m%d")
+presents = c(0,7,5)
+plot(dates,presents)
+lines(dates,presents)
+```
+
+11) TODO
+```{r}
+k<- read.table(file="tst1.txt" , header =TRUE)
+mytest <- k$g * 5
+write.table (mytest, file="tst2.txt")
+```
+
+12) TODO 
+```{r}
+vars = seq(from=1, to=100)
+s = c()
+
+for(i in 1:length(vars)) 
+{
+  if(vars[i] < 5) {
+    s[i] <- (vars[i] *10)
+  }else if (vars[i] > 90){
+    s[i] <- (vars[i] *10)
+  }else{
+    s[i] = (vars[i]*0.1)
+  }
+}
+s
+```
+
+14) TODO
+```{r}
+functions = function(argv)
+{
+  s2=c()
+  for(i in 1:length(argv)) 
+  {
+    if(argv[i] < 5) {
+      s2[i] <- (argv[i] *10)
+    }else if (argv[i] > 90){
+      s2[i] <- (argv[i] *10)
+    }else{
+      s2[i] = (argv[i]*0.1)
+    }
+  }
+  s2
+}
+
+functions(argv = c(7:30))
+```
+
